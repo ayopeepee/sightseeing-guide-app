@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "160406148796",
+    "project_id": "sigthseeing-guide",
+    "storage_bucket": "sigthseeing-guide.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160406148796:android:f33e0c5b783fb070b8e2b9",
+        "android_client_info": {
+          "package_name": "com.example.sigthseeingguide"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG1GC5OJ-vqiepV5phuMiOSzPOICl_-5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
