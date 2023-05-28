@@ -52,7 +52,7 @@ class SignInFragment : Fragment() {
         if (email.isNotEmpty() && password.isNotEmpty()) {
             firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                 if (it.isSuccessful) {
-                    val action = SignInFragmentDirections.actionSignInFragmentToPlacesFragment()
+                    val action = SignInFragmentDirections.actionSignInFragmentToPlacesFragment(email)
                     this.findNavController().navigate(action)
                 } else {
                     Toast.makeText(requireContext(), it.exception.toString(), Toast.LENGTH_SHORT).show()

@@ -13,9 +13,6 @@
         <action
             android:id="@+id/action_signInFragment_to_placesFragment"
             app:destination="@id/placesFragment" />
-        <argument
-            android:name="username"
-            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/placesFragment"
@@ -25,6 +22,9 @@
         <action
             android:id="@+id/action_placesFragment_to_placeInfoFragment"
             app:destination="@id/placeInfoFragment" />
+        <argument
+            android:name="username"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/placeInfoFragment"

@@ -7,9 +7,10 @@
     tools:context=".PlacesFragment">
 
     <TextView
+        android:id="@+id/text_view_hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Привет, юзернейм!"
+        android:text="@string/hello_text"
         android:layout_gravity="center"
         android:layout_margin="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>

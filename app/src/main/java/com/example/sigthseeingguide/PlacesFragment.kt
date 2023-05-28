@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import androidx.navigation.NavArgs
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sigthseeingguide.databinding.FragmentPlacesBinding
 import com.google.firebase.firestore.FirebaseFirestore
@@ -14,6 +17,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 class PlacesFragment : Fragment() {
 
     private var _binding: FragmentPlacesBinding? = null
+    private val args: PlacesFragmentArgs by navArgs()
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +33,8 @@ class PlacesFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        binding.textViewHello.text = String.format(getString(R.string.hello_text), args.username)
 
         binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
