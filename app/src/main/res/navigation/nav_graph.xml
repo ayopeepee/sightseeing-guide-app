@@ -30,5 +30,18 @@
         android:id="@+id/placeInfoFragment"
         android:name="com.example.sigthseeingguide.PlaceInfoFragment"
         android:label="fragment_place_info"
-        tools:layout="@layout/fragment_place_info" />
+        tools:layout="@layout/fragment_place_info" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="info"
+            app:argType="string" />
+        <argument
+            android:name="latitude"
+            app:argType="string" />
+        <argument
+            android:name="longitude"
+            app:argType="string" />
+    </fragment>
 </navigation>
