@@ -30,7 +30,6 @@ class PlaceInfoFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        MapKitFactory.setApiKey("1abb5369-ef3b-450a-be39-4940775a68ae")
         MapKitFactory.initialize(requireContext())
         _binding = FragmentPlaceInfoBinding.inflate(inflater, container, false)
         return binding.root

@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
+        MapKitFactory.setApiKey("1abb5369-ef3b-450a-be39-4940775a68ae")
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
