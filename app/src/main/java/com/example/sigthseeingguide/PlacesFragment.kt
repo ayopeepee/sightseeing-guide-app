@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat
-import androidx.navigation.NavArgs
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sigthseeingguide.databinding.FragmentPlacesBinding
@@ -47,10 +45,8 @@ class PlacesFragment : Fragment() {
         FirebaseFirestore.getInstance().collection("cards")
             .get()
             .addOnSuccessListener { documents ->
-                for (document in documents) {
-                    val card = documents.toObjects(CardModel::class.java)
-                    binding.recyclerView.adapter = CardAdapter(card, requireContext())
-                }
+                val card = documents.toObjects(CardModel::class.java)
+                binding.recyclerView.adapter = CardAdapter(card, requireContext())
             }
             .addOnFailureListener {
                 Toast.makeText(requireContext(), "error", Toast.LENGTH_SHORT).show()

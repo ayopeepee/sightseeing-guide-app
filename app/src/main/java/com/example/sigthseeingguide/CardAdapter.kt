@@ -34,7 +34,7 @@ class CardAdapter(private val cards: List<CardModel>, private val context: Conte
             .load(card.cardImage)
             .into(holder.cardImage)
         holder.button.setOnClickListener {
-            val action = PlacesFragmentDirections.actionPlacesFragmentToPlaceInfoFragment(
+            val action = PlacesFragmentDirections.actionPlacesFragmentToBottomNavigationFragment(
                 card.cardName,
                 card.info,
                 card.latitude,

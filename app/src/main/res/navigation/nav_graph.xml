@@ -20,8 +20,8 @@
         android:label="fragment_places"
         tools:layout="@layout/fragment_places" >
         <action
-            android:id="@+id/action_placesFragment_to_placeInfoFragment"
-            app:destination="@id/placeInfoFragment" />
+            android:id="@+id/action_placesFragment_to_bottomNavigationFragment"
+            app:destination="@id/bottomNavigationFragment" />
         <argument
             android:name="username"
             app:argType="string" />
@@ -37,6 +37,34 @@
         <argument
             android:name="info"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottomNavigationFragment"
+        android:name="com.example.sigthseeingguide.BottomNavigationFragment"
+        android:label="fragment_bottom_navigation"
+        tools:layout="@layout/fragment_bottom_navigation" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="info"
+            app:argType="string" />
+        <argument
+            android:name="latitude"
+            app:argType="string" />
+        <argument android:name="longitude" />
+        <action
+            android:id="@+id/action_bottomNavigationFragment_to_placeMapFragment"
+            app:destination="@id/placeMapFragment" />
+        <action
+            android:id="@+id/action_bottomNavigationFragment_to_placeInfoFragment"
+            app:destination="@id/placeInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeMapFragment"
+        android:name="com.example.sigthseeingguide.PlaceMapFragment"
+        android:label="fragment_place_map"
+        tools:layout="@layout/fragment_place_map" >
         <argument
             android:name="latitude"
             app:argType="string" />
